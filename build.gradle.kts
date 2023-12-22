@@ -26,6 +26,8 @@ tasks.withType<KotlinNpmInstallTask>().configureEach {
 }
 
 allprojects {
+    apply(plugin = "maven-publish")
+
     setUpLocalSigning()
 
     repositories {
