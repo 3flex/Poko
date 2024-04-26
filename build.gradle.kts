@@ -14,10 +14,8 @@ plugins {
 
 plugins.withType<NodeJsRootPlugin> {
     extensions.getByType<NodeJsRootExtension>().apply {
-        // WASM requires a canary Node.js version. This is the last v22 nightly that supports
-        // darwin-arm64, darwin-x64 and win-x64 artifacts:
-        nodeVersion = "22.0.0-nightly20240410c82f3c9e80"
-        nodeDownloadBaseUrl = "https://nodejs.org/download/nightly"
+        // WASM requires Node.js 22
+        nodeVersion = "22.0.0"
     }
 }
 
